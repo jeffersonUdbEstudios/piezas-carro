@@ -11,10 +11,10 @@ const HomeScreen = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Vehicle Parts History</Text>
+      <Text style={styles.title}>Historia de las piezas del vehículo</Text>
       
-      <Button 
-        title={showAddForm ? "Hide Form" : "Add New Part"} 
+      <Button w
+        title={showAddForm ? "Ocultar formulario" : "Agregar nueva pieza"} 
         onPress={() => setShowAddForm(!showAddForm)} 
       />
       
@@ -24,7 +24,7 @@ const HomeScreen = () => {
         data={parts.sort((a, b) => new Date(b.changeDate) - new Date(a.changeDate))}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => <PartItem part={item} />}
-        ListEmptyComponent={<Text style={styles.empty}>No parts added yet</Text>}
+        ListEmptyComponent={<Text style={styles.empty}>Todavía no se han añadido piezas</Text>}
       />
       
       <PartModal visible={modalVisible} onClose={() => setModalVisible(false)} />

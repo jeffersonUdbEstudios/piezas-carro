@@ -3,16 +3,16 @@ import { View, Text, TextInput, Button, Picker, StyleSheet } from 'react-native'
 import { PartsContext } from './PartsContext';
 
 const partTypes = [
-  'Engine Oil',
-  'Air Filter',
-  'Oil Filter',
-  'Fuel Filter',
-  'Spark Plugs',
-  'Battery',
-  'Brake Pads',
-  'Tires',
-  'Windshield Wipers',
-  'Timing Belt',
+  'Aceite de motor',
+  'Filtro de aire',
+  'Filtro de acite',
+  'Filtro de combustible',
+  'Bujias',
+  'Baterias',
+  'Pastilla de frenos',
+  'Neumaticos',
+  'Limpiaparabrisas',
+  'Correa de distribucion',
 ];
 
 const AddPartForm = () => {
@@ -26,7 +26,7 @@ const AddPartForm = () => {
 
   const handleSubmit = () => {
     if (!brand || !serialNumber || !price) {
-      alert('Please fill all fields');
+      alert('Por favor, rellene todos los campos');
       return;
     }
 
@@ -46,9 +46,9 @@ const AddPartForm = () => {
 
   return (
     <View style={styles.formContainer}>
-      <Text style={styles.formTitle}>Add New Part</Text>
+      <Text style={styles.formTitle}>Agregar nueva pieza</Text>
       
-      <Text style={styles.label}>Part Type:</Text>
+      <Text style={styles.label}>Tipo de pieza:</Text>
       <Picker
         selectedValue={partType}
         style={styles.picker}
@@ -59,32 +59,32 @@ const AddPartForm = () => {
         ))}
       </Picker>
       
-      <Text style={styles.label}>Brand:</Text>
+      <Text style={styles.label}>Marca:</Text>
       <TextInput
         style={styles.input}
         value={brand}
         onChangeText={setBrand}
-        placeholder="Enter brand"
+        placeholder="Introducir marca"
       />
       
-      <Text style={styles.label}>Serial Number:</Text>
+      <Text style={styles.label}>Número de serie:</Text>
       <TextInput
         style={styles.input}
         value={serialNumber}
         onChangeText={setSerialNumber}
-        placeholder="Enter serial number"
+        placeholder="Introducir Numero de Serie"
       />
       
-      <Text style={styles.label}>Price:</Text>
+      <Text style={styles.label}>Precio:</Text>
       <TextInput
         style={styles.input}
         value={price}
         onChangeText={setPrice}
-        placeholder="Enter price"
+        placeholder="Introducir precio"
         keyboardType="numeric"
       />
       
-      <Text style={styles.label}>Change Date:</Text>
+      <Text style={styles.label}>Fecha de cambio:</Text>
       <TextInput
         style={styles.input}
         value={changeDate}
@@ -92,7 +92,7 @@ const AddPartForm = () => {
         placeholder="YYYY-MM-DD"
       />
       
-      <Button title="Add Part" onPress={handleSubmit} />
+      <Button title="Agregar parte" onPress={handleSubmit} />
     </View>
   );
 };

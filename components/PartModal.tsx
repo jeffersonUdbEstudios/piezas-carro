@@ -16,37 +16,37 @@ const PartModal = ({ visible, onClose }) => {
     >
       <View style={styles.centeredView}>
         <View style={styles.modalView}>
-          <Text style={styles.modalTitle}>Part Details</Text>
+          <Text style={styles.modalTitle}>Detalles de la pieza</Text>
           
           <View style={styles.detailRow}>
-            <Text style={styles.detailLabel}>Part Type:</Text>
+            <Text style={styles.detailLabel}>Tipo de pieza:</Text>
             <Text style={styles.detailValue}>{selectedPart.partType}</Text>
           </View>
           
           <View style={styles.detailRow}>
-            <Text style={styles.detailLabel}>Brand:</Text>
+            <Text style={styles.detailLabel}>Marca:</Text>
             <Text style={styles.detailValue}>{selectedPart.brand}</Text>
           </View>
           
           <View style={styles.detailRow}>
-            <Text style={styles.detailLabel}>Serial Number:</Text>
+            <Text style={styles.detailLabel}>Número de serie:</Text>
             <Text style={styles.detailValue}>{selectedPart.serialNumber}</Text>
           </View>
           
           <View style={styles.detailRow}>
-            <Text style={styles.detailLabel}>Price:</Text>
+            <Text style={styles.detailLabel}>Precio:</Text>
             <Text style={styles.detailValue}>${selectedPart.price}</Text>
           </View>
           
           <View style={styles.detailRow}>
-            <Text style={styles.detailLabel}>Change Date:</Text>
+            <Text style={styles.detailLabel}>Fecha de cambio:</Text>
             <Text style={styles.detailValue}>
               {new Date(selectedPart.changeDate).toLocaleDateString()}
             </Text>
           </View>
           
           <TouchableOpacity style={styles.closeButton} onPress={onClose}>
-            <Text style={styles.closeButtonText}>Close</Text>
+            <Text style={styles.closeButtonText}>Cerrar</Text>
           </TouchableOpacity>
         </View>
       </View>
