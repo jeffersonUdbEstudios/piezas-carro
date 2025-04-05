@@ -21,7 +21,7 @@ const PartItem = ({ part }) => {
           style={styles.deleteButton} 
           onPress={() => deletePart(part.id)}
         >
-          <Text style={styles.deleteText}>Delete</Text>
+          <Text style={styles.deleteText}>Eliminar</Text>
         </TouchableOpacity>
       </View>
     </TouchableOpacity>
